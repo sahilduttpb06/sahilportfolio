@@ -818,6 +818,14 @@ section,
     font-size: 14px;
     margin: 0 5px;
   }
+  img.aos-init.aos-animate {
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero {
+    width: 100%;
+    min-height: auto;
+  }
 }
 
 .portfolio .portfolio-content {
