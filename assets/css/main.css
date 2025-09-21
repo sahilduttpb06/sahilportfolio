@@ -1165,7 +1165,6 @@ section,
 .form-input:focus,
 .form-textarea:focus {
   border-color: #007BFF;
-  /* Accent color */
   outline: none;
 }
 
