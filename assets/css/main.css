@@ -1310,95 +1310,38 @@ section,
   color: var(--accent-color);
 }
 
-/* Floating Buttons Wrapper */
-.floating-buttons {
+.whatsapp-float {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  z-index: 9999;
-}
-
-/* Button Style */
-.float-btn {
   width: 58px;
   height: 58px;
+  background: #25D366;
   border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.float-btn img {
-  width: 100%;
-  height: 100%;
-  padding: 12px;
-  object-fit: contain;
-}
-
-/* Hover Animation */
-.float-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-/* Typebot Overlay */
-.typebot-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-}
-
-/* Chat Box */
-.typebot-box {
-  width: 95%;
-  max-width: 420px;
-  height: 600px;
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Iframe */
-.typebot-box iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  background: #000;
-  color: #fff;
-  border: none;
+.whatsapp-float img {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 2;
 }
 
-/* Mobile Responsive */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* Mobile */
 @media (max-width: 480px) {
-  .float-btn {
+  .whatsapp-float {
     width: 52px;
     height: 52px;
-  }
-
-  .typebot-box {
-    height: 90vh;
+    right: 16px;
+    bottom: 16px;
   }
 }

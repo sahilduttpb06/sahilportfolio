@@ -1,18 +1,10 @@
-const openBtn = document.getElementById("openTypebot");
-const closeBtn = document.getElementById("closeTypebot");
-const overlay = document.getElementById("typebotOverlay");
+const typebotInitScript = document.createElement("script");
+typebotInitScript.type = "module";
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
 
-openBtn.addEventListener("click", () => {
-  overlay.style.display = "flex";
+Typebot.initBubble({
+  typebot: "lead-generation-ol73zwa",
+  theme: { button: { backgroundColor: "#149ddd" } },
 });
-
-closeBtn.addEventListener("click", () => {
-  overlay.style.display = "none";
-});
-
-/* Close when clicking outside */
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) {
-    overlay.style.display = "none";
-  }
-});
+`;
+document.body.append(typebotInitScript);
